@@ -1,9 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity,KeyboardAvoidingView} from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import { LoginBackground } from './common/LoginBackground';
 import { Logo } from './common/Logo';
 import { InputLogin } from './common/InputLogin';
+import { ButtonSubmit } from './common/ButtonSubmit';
 import AppStyleSheet from './common/AppStyleSheet';
 import Dimensions from 'Dimensions';
 class LoginScreen extends React.Component {
@@ -25,7 +26,7 @@ class LoginScreen extends React.Component {
                 onTextSubmit = { (text) = {
 
                 }}/>
-            <InputLogin 
+              <InputLogin 
                 leftIcon = {require('./assets/images/password.png')}
                 textSize = {16}
                 placeholder = 'password'
@@ -38,13 +39,8 @@ class LoginScreen extends React.Component {
                 onTextSubmit = { (text) = {
 
                 }}/>
-              <TouchableOpacity 
-                  style={styles.container_button}
-                  onPress = {() => {
-
-                  }}>
-                <Text style = {styles.text_button}>{'Login'.toUpperCase()}</Text>
-              </TouchableOpacity>
+           
+             <ButtonSubmit />
               <View style={styles.container_btn_register}>
                 <TouchableOpacity 
                    onPress = {() => {
